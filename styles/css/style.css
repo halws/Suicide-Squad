@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
+* {
+  margin: 0;
+  padding: 0; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+#banner {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover; }
+
+#tiles {
+  font-family: 'Open Sans Condensed', sans-serif; }
+  #tiles .container {
+    justify-content: center; }
+  #tiles .row {
+    justify-content: center; }
+  #tiles .col {
+    position: relative;
+    max-width: 300px;
+    padding: 0;
+    justify-content: center;
+    align-items: center; }
+    #tiles .col span {
+      position: absolute;
+      bottom: 15px;
+      padding: 5px 0;
+      text-align: center;
+      color: white;
+      background-color: rgba(31, 6, 45, 0.9); }
+    #tiles .col .hidden {
+      display: none;
+      height: 70%;
+      width: 70%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -35% 0 0 -35%;
+      z-index: 1001;
+      background-image: url(../../images/deadshot.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      border-radius: 5px; }
+  #tiles .inner {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    max-width: 300px; }
+  #tiles img {
+    min-width: 270px;
+    max-height: 270px; }
+
+.hidden {
+  display: block; }
+
+#promo {
+  height: 460px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-image: url(../../images/promo-bg.png); }
+  @media (max-width: 1200px) {
+    #promo {
+      background-size: cover;
+      background-image: url(../../images/promo-bg-sm.png); } }
+
+footer {
+  height: 100px;
+  background-image: url(../../images/purple-bg.png); }
+
+/*# sourceMappingURL=style.css.map */

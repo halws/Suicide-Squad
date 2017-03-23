@@ -1,0 +1,59 @@
+#tiles {
+    font-family: 'Open Sans Condensed', sans-serif;
+    & .container {
+        justify-content: center;
+    }
+    & .row {
+        justify-content: center;
+    }
+    & .col {
+        position: relative;
+        max-width: 300px;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        & span {
+            position: absolute;
+            bottom: 15px;
+            padding: 5px 0;
+            text-align: center;
+            color: white;
+            background-color: rgba(31, 6, 45, 0.9);
+        }
+        & .hidden {
+            display: none;
+            height: 70%;
+            width: 70%;
+           
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -35% 0 0 -35%;
+            z-index: 1001;
+            background-image: url(../../images/deadshot.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            border-radius: 5px;
+            // &:hover{
+            //     display: block;
+            // }
+        }
+    }
+    & .inner {
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        max-width: 300px;
+    }
+    & img {
+        min-width: 270px;
+        max-height: 270px;
+    }
+}
+$col:'.col:hover';
+@if $col {
+    .hidden{
+        display: block;
+    }
+}
