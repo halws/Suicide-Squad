@@ -12,29 +12,11 @@ $(function checkPosition() {
             });
 
         });
-
     }
 });
 
 $(function() {
+    var $firstSpan = $('#tiles .row:first .col span');
     var firstImageWidth = $('#tiles .row:first .col img').width();
-    $('#tiles .row:first .col span').width(firstImageWidth);
-    $('#tiles .row:first .col').first().css({
-        'display': 'flex',
-        'align-items': 'center',
-        'justify-content': 'flex-start'
-    });
-    $('.hidden').css({
-        'opacity': '0',
-        'display': 'block'
-    })
-    $('.col', this).hover(
-        function() {
-            $('.hidden', this).fadeTo(500, 1);
-        },
-        function() {
-            $('.hidden', this).fadeTo(500, 0);
-        }
-
-    );
-})
+    $firstSpan.width(firstImageWidth);
+});

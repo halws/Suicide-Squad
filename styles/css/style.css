@@ -22,33 +22,6 @@ img {
     justify-content: center; }
   #tiles .row {
     justify-content: center; }
-  #tiles .col {
-    position: relative;
-    max-width: 300px;
-    padding: 0;
-    justify-content: center;
-    align-items: center; }
-    #tiles .col span {
-      position: absolute;
-      bottom: 15px;
-      padding: 5px 0;
-      text-align: center;
-      color: white;
-      background-color: rgba(31, 6, 45, 0.9); }
-    #tiles .col .hidden {
-      display: none;
-      height: 70%;
-      width: 70%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin: -35% 0 0 -35%;
-      z-index: 1001;
-      background-image: url(../../images/deadshot.jpg);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      border-radius: 5px; }
   #tiles .inner {
     padding: 15px;
     display: flex;
@@ -58,8 +31,42 @@ img {
     min-width: 270px;
     max-height: 270px; }
 
-.hidden {
-  display: block; }
+#tiles .col {
+  border: 1px solid black;
+  position: relative;
+  max-width: 300px;
+  padding: 0;
+  justify-content: center;
+  align-items: center; }
+  #tiles .col:first {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+  #tiles .col span {
+    position: absolute;
+    bottom: 15px;
+    padding: 5px 0;
+    text-align: center;
+    color: white;
+    background-color: rgba(31, 6, 45, 0.9); }
+  #tiles .col .hidden {
+    opacity: 0;
+    display: block;
+    height: 60%;
+    width: 60%;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    margin: -30% 0 0 -30%;
+    z-index: 1001;
+    border-radius: 5px;
+    transition: opacity ease .5s; }
+    #tiles .col .hidden img {
+      min-width: 0;
+      width: 100%;
+      height: auto; }
+    #tiles .col .hidden:hover {
+      opacity: 1; }
 
 #promo {
   height: 460px;
