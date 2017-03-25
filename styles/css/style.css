@@ -32,7 +32,6 @@ img {
     max-height: 270px; }
 
 #tiles .col {
-  border: 1px solid black;
   position: relative;
   max-width: 300px;
   padding: 0;
@@ -50,14 +49,10 @@ img {
     color: white;
     background-color: rgba(31, 6, 45, 0.9); }
   #tiles .col .hidden {
+    padding: 15px;
     opacity: 0;
     display: block;
-    height: 60%;
-    width: 60%;
     position: absolute;
-    top: 44%;
-    left: 50%;
-    margin: -30% 0 0 -30%;
     z-index: 1001;
     border-radius: 5px;
     transition: opacity ease .5s; }
@@ -65,6 +60,8 @@ img {
       min-width: 0;
       width: 100%;
       height: auto; }
+    #tiles .col .hidden .hidden-span {
+      bottom: 20px; }
     #tiles .col .hidden:hover {
       opacity: 1; }
 
