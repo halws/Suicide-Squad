@@ -1,12 +1,73 @@
 #promo {
+   & .animated{
+		opacity:0;
+	}
+    overflow: hidden;
+   
     height: 460px;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    background-image: url(../../images/promo-bg.png);
-    @include media("( max-width:1200px )"){
-	background-size: cover;  
-	background-image: url(../../images/promo-bg-sm.png);
-};
+    background-image: url(../../images/splash-bg.png);
+    position: relative;
+    & img {
+        display: inline;
+        max-width: 100%;
+        height: auto;
+    }
+    & div:first-child {
+        position: relative;
+        box-sizing: border-box;
+        padding-top: 80px;
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        & span:first-child {
+            display: block;
+            width: 50%;
+            text-align: center;
+            & img {
+                border-radius: 7px;
+            }
+        }
+        & span:last-child {
+            position: absolute;
+            right: -50px;
+            display: block;
+            width: 10%;
+        }
+    }
+//     @include media("( max-width:1200px )"){
+// 	background-size: cover;  
+// 	background-image: url(../../images/promo-bg-sm.png);
+
+// }
+}
+#promo div:last-child {
+	 z-index: 1001;
+    box-sizing: border-box;
+    padding-bottom: 80px;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    & span:first-child {
+        position: absolute;
+        left: -30px;
+        display: block;
+        width: 20%;
+    }
+    & span:nth-child(2) {
+        display: flex;
+        align-items: center;
+        width: 80%;
+    }
+    & span:last-child {
+        position: absolute;
+        right: 0;
+        bottom: 7%;
+        display: block;
+        width: 30%;
+    }
 }

@@ -66,16 +66,62 @@ img {
       opacity: 1; }
 
 #promo {
+  overflow: hidden;
   height: 460px;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  background-image: url(../../images/promo-bg.png); }
-  @media (max-width: 1200px) {
-    #promo {
-      background-size: cover;
-      background-image: url(../../images/promo-bg-sm.png); } }
+  background-image: url(../../images/splash-bg.png);
+  position: relative; }
+  #promo .animated {
+    opacity: 0; }
+  #promo img {
+    display: inline;
+    max-width: 100%;
+    height: auto; }
+  #promo div:first-child {
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 80px;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    #promo div:first-child span:first-child {
+      display: block;
+      width: 50%;
+      text-align: center; }
+      #promo div:first-child span:first-child img {
+        border-radius: 7px; }
+    #promo div:first-child span:last-child {
+      position: absolute;
+      right: -50px;
+      display: block;
+      width: 10%; }
+
+#promo div:last-child {
+  z-index: 1001;
+  box-sizing: border-box;
+  padding-bottom: 80px;
+  height: 50%;
+  display: flex;
+  justify-content: center; }
+  #promo div:last-child span:first-child {
+    position: absolute;
+    left: -30px;
+    display: block;
+    width: 20%; }
+  #promo div:last-child span:nth-child(2) {
+    display: flex;
+    align-items: center;
+    width: 80%; }
+  #promo div:last-child span:last-child {
+    position: absolute;
+    right: 0;
+    bottom: 7%;
+    display: block;
+    width: 30%; }
 
 footer {
   height: 100px;
